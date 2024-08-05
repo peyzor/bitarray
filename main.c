@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-unsigned char bitArray[32];
+unsigned char bitArray[4];
 
 void setBit(int index, int value) {
     if (value) {
@@ -18,10 +18,11 @@ int getBit(int index) {
 int main() {
     memset(bitArray, 0, sizeof(bitArray));
 
-    setBit(5, 1);
+    setBit(2, 1);
     setBit(30, 1);
+    setBit(30, 0);
 
-    printf("Bit 5 state: %d\n", getBit(5));
+    printf("Bit 2 state: %d\n", getBit(2));
     printf("Bit 30 state: %d\n", getBit(30));
     printf("Bit 10 state: %d\n", getBit(10));
 }
